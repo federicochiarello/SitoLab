@@ -1,0 +1,92 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="it" lang="it">
+
+<head>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>The Big Bang Theory saga</title>
+ 
+    <meta name="title" content="The Big Bang Theory Saga" />
+    <meta name="description" content="Sito realizzato per il corso di Tecnologia Web per raccontare HTML e la storia di Big Bang Theory" />
+    <meta name="keywords" content="" />
+
+    <mata name="author" content="Io" />
+    <meta name="language" content="italian it" />
+
+    <link rel="stylesheet" type="text/css" href="style/style.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="style/small.css" media="handheld, screen and (max-width: 640px), only screen and (max-device-width: 640px)" />
+    <link rel="stylesheet" type="text/css" href="style/mini.css" media="handheld, screen and (max-width: 480px), only screen and (max-device-width: 480px)" />    
+    <link rel="stylesheet" type="text/css" href="style/print.css" media="print" />
+
+    <script type="text/javascript" src="checkFromLavoro.js"></script>
+
+</head>
+
+<body onload="caricamento();">
+
+<div id="header">
+    <a class="aiutiNascosti" href="#menu"> Vai al menù </a>
+    <a class="aiutiNascosti" href="#contentPagina"> Vai al contenuto </a>
+
+    <img id="logo" src="images/bbtlogo.png" alt="Atomo con al posto del nucleo The Big Bang Theory" />
+    <h1 xml:lang="en">The Big Bang Theory</h1>
+    <h2 xml:lang="en">"I'm not crazy. My mother had me tested"</h2>
+</div>
+
+<div id="breadcrumb">
+    <p>Ti trovi in: <span xml:lang="en">Home</span> &gt;&gt; Aggiungi nuovo protagonista</p>
+</div>
+
+<div id="menu">
+    <ul>
+        <li xml:lang="en"><a href="home.html">Home</a></li>
+        <li><a href="trama.html">Trama</a></li>
+        <li><a href="personaggi.html">Protagonisti</a></li>
+        <li id="currentLink">Nuovo Personaggio</li>
+        <li><a href="stagioni.html">Stagioni</a></li>
+        <li><a href="curiosita.html">Curiosità</a></li>
+    </ul>
+</div>
+
+<div class="contenutoGenerale">
+    
+<form method="post" action="nuovoProtagonista.php" onsubmit="return validateForm();">
+	<messaggiForm />
+    <fieldset>
+        <label for="nome">Nome: </label>
+        <span><input type="text" id="nome" name="nome" value="<valoreNome />" /></span><br />
+        <label for="specializzazione">Specializzazione: </label>
+        <span><input type="text" name="specializzazione" id="specializzazione" value="<valoreSpecializzazione />" /></span><br />
+        <label for="qi"><abbr title="Quoziente Intellettivo">Q.I.</abbr></label>
+        <span><input type="text" name="qi" id="qi" value="<valoreQi />"/></span><br />
+    </fieldset>
+    <fieldset>
+        <label for="descrizione">Descrizione: </label>
+        <span><textarea id="descrizione" name="descrizione" rows="10" cols="50"><valoreDescrizione /></textarea></span>
+    </fieldset>
+    <fieldset>
+        <input type="checkbox" name="stagioni[]" value="primaStagione" id="primaStagione" [valoreCheckedPrimaStagione] />
+        <label for="primaStagione">Prima stagione</label>
+        <input type="checkbox" name="stagioni[]" value="secondaStagione" id="secondaStagione" [valoreCheckedSecondaStagione] />
+        <label for="secondaStagione">Seconda stagione</label>
+        <input type="checkbox" name="stagioni[]" value="terzaStagione" id="terzaStagione" />
+        <label for="terzaStagione">Terza stagione</label>
+        <input type="checkbox" name="stagioni[]" value="quartaStagione" id="quartaStagione" />
+        <label for="quartaStagione">Quarta stagione</label>
+    </fieldset>
+    <fieldset>
+        <button type="submit" name="submit">Inserisci</button>
+    </fieldset>
+</form>
+
+</div>
+
+<div id="footer">
+    <img id="imgValidCode" src="images/valid-xhtml10.png" alt="XHTML valido" />
+    <img id="imgValidCSS" src="images/vcss-blue.gif" alt="CSS valido" />
+    <p>Il sito è stato creato per un esercizio nell'ambito del corso di Teconologie Web e non rappresente quindi la serie di The Big Bang Theory.
+    I testi sono stati gentilmente presi in prestito da Wikipedia</p>
+</div>
+
+</body>
+</html>
